@@ -74,9 +74,16 @@
         string[] emails = ["g_poly1@yahoo.gr", "g_poly2@yahoo.gr", "g_poly3@yahoo.gr", "g_poly4@yahoo.gr", "g_poly5@yahoo.gr"];
 
         Dictionary<string, Student> emailStudents = new Dictionary<string, Student>();
+        int emailIndex = 0;
         foreach (Student st in students)
         {
-            emailStudents.Add()
+            emailStudents.Add(emails[emailIndex], st);
+            emailIndex++;
+        }
+        foreach (var item in emailStudents)
+        {
+            Console.WriteLine("Key: " + item.Key);
+            Console.WriteLine("Value: " + item.Value.studentName);
         }
     }
     public class Student
